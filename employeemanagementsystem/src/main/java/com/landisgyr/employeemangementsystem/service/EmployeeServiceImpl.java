@@ -1,21 +1,30 @@
 package com.landisgyr.employeemangementsystem.service;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import com.landisgyr.employeemangementsystem.dto.Employee;
 import com.landisgyr.employeemangementsystem.exception.InvalidIdException;
 import com.landisgyr.employeemangementsystem.repository.EmployeeRepository;
 import com.landisgyr.employeemangementsystem.repository.EmployeeRepositoryImpl;
-
+@Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
 
-	EmployeeRepository employeeRepository  = EmployeeRepositoryImpl.getInstance();
+	@Autowired
+	
+	EmployeeRepository employeeRepository;
 	// have we created repo object.
 	public String addEmployee(Employee employee) throws InvalidIdException {
 		// background verification
 		// criminal cross check 
 		// address verification
+		Connection  connection = null;
 		
 		return employeeRepository.addEmployee(employee);
 	}
@@ -53,7 +62,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public Optional<List<Employee>> getEmployees3() {
+	public Optional<?> getEmployees3() {
 		// TODO Auto-generated method stub
 		return employeeRepository.getEmployees3();
 	}

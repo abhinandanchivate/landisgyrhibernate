@@ -10,7 +10,7 @@ public interface EmployeeService {
 	public String addEmployee(Employee employee) throws Exception;
 	public Employee[] getEmployees() ;
 	public Object[] getEmployees2() ;
-	public Optional<List<Employee>> getEmployees3() ;
+	public Optional<?> getEmployees3() ;
 	public Employee getEmployeeById(String empId) ;
 	public String deleteEmployeeById(String empId);
 	public Employee updateEmployee(String empId, Employee employee);

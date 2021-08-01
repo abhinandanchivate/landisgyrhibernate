@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- <bean id="myBean" class="com.landisgyr.employeemangementsystem.dto.HelloWorld" scope="prototype">
+	<constructor-arg name="value" type="String" value="abhi"></constructor-arg>
+	<constructor-arg name="data" type="int" value="10"></constructor-arg>
+	<constructor-arg name="value2" type="String" value="abhinandan"></constructor-arg>
+	
+	</bean>
+	 -->
+</beans>
